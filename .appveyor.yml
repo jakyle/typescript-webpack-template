@@ -11,7 +11,7 @@ environment:
     #install modules
     -npm install
 
-    #post-install test scripts.
+    # Post-install test scripts.
     test_script:
     #Output useful info for debugging.
     - node --version
