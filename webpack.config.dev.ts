@@ -4,13 +4,14 @@ import * as path from 'path';
 const extractCSS: any = new ExtractTextPlugin("./dist/css/[name].css"); */
 
 export default {
+    watch: true,
     devtool: 'inline-source-map',
     entry: [
         path.resolve(__dirname, 'src/index'),
     ],
     target: 'web',
     output: {
-        path: path.resolve(__dirname, './src'),
+        path: path.resolve(__dirname, 'src'),
         publicPath: '/',
         filename: 'bundle.js',
     },
