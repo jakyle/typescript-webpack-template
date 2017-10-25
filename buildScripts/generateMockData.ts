@@ -8,7 +8,8 @@ import * as fs from 'fs';
 import mocker from 'mocker-data-generator';
 import {schema} from './mockDataSchema';
 
-const json = JSON.stringify(mocker(schema));
+const json = mocker()
+.schema('users', schema, {min: 3, max: 5}).build((data: any) => JSON.stringify(data));
 
 fs.writeFile('./src/api/db.json', json, (err: any) => {
     if (err) {

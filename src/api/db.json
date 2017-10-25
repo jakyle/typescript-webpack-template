@@ -1,1 +1,12 @@
-{"schemas":[],"DB":{},"options":{"type":"object","properties":{"users":{"type":"array","minItems":3,"maxItems":5,"items":{"type":"object","properties":{"id":{"type":"number","unique":true,"minimum":1},"firstName":{"type":"string","faker":"name.firstName"},"lastName":{"type":"string","faker":"name.lastName"},"email":{"type":"string","faker":"internet.email"}},"required":["id","firstName","lastName","email"]}}},"required":["users"]}}
+{
+  "users": [
+    {
+      "id": "14e37798-0185-5ae4-a00a-9e5cbe8dbba9",
+      "firstName": "Magdalena",
+      "lastName": "Wuckert",
+      "country": "Guadeloupe",
+      "createdAt": "2017-01-18T21:02:04.123Z",
+      "email": "Kenyatta_Osinski@gmail.com"
+    }
+  ]
+}

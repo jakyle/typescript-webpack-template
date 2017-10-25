@@ -1,34 +1,20 @@
-export const schema = {
-    type: 'object',
-    properties: {
-      users: {
-        type: 'array',
-        minItems: 3,
-        maxItems: 5,
-        items: {
-          type: 'object',
-          properties: {
-            id: {
-              type: 'number',
-              unique: true,
-              minimum: 1,
-            },
-            firstName: {
-              type: 'string',
-              faker: 'name.firstName',
-            },
-            lastName: {
-              type: 'string',
-              faker: 'name.lastName',
-            },
-            email: {
-              type: 'string',
-              faker: 'internet.email',
-            },
-          },
-          required: ['id', 'firstName', 'lastName', 'email'],
-        },
-      },
+export const schema: object = {
+    id: {
+        chance: 'guid',
     },
-    required: ['users'],
-  };
+    firstName: {
+        faker: 'name.firstName',
+    },
+    lastName: {
+        faker: 'name.lastName',
+    },
+    country: {
+        faker: 'address.country',
+    },
+    createdAt: {
+        faker: 'date.past',
+    },
+    email: {
+        faker: 'internet.email',
+    },
+};

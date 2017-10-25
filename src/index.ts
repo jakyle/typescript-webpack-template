@@ -1,4 +1,4 @@
-import {getUsers} from './api/userApi';
+import {deleteUser, getUsers} from './api/userApi';
 import './index.scss';
 const globalAny: any = global;
 
@@ -17,4 +17,18 @@ getUsers().then((result: any) => {
     });
 
     globalAny.document.getElementById('users').innerHTML = usersBody;
+
+    const deleteLinks = globalAny.document.getElementsByClassName('deleteUser');
+
+    // Must use array.from to create a real array from a DOM collection
+    // getElementByClassname only returns an "array Like" object
+    Array.from<any, any>(deleteLinks, (link) => {
+        link.onclick = (event: any) => {
+            const element = event.target;
+            event.preventDefault();
+            deleteUser(element.attributes['data-id'].value);
+            const row = element.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        };
+    });
 });
