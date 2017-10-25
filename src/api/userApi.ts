@@ -13,6 +13,5 @@ function onSuccess(response: any) {
 }
 
 function onError(error: any) {
-    // tslint:disable-next-line:no-console
     console.log(error);
 }

@@ -27,7 +27,7 @@ export default {
                 exclude: /(node_modules)/,
                 options: {
                     formatter: 'stylish',
-                    failOnHint: true,
+                    failOnHint: false,
                 },
             },
             {   test: /\.(ts|tsx)$/,

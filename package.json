@@ -10,7 +10,8 @@
     "open:src": "ts-node buildScripts/srcServer.ts",
     "security-check": "nsp check",
     "localtunnel": "lt --port 3000 --subdomain jakyle",
-    "share": "npm-run-all --parallel open:src localtunnel"
+    "share": "npm-run-all --parallel open:src localtunnel",
+    "generate-mock-data": "ts-node buildScripts/generateMockData"
   },
   "author": "James Jackson",
   "license": "MIT",
@@ -58,6 +59,7 @@
     "mocha": "^3.5.3",
     "mocha-typescript": "^1.1.11",
     "mocha-webpack": "^0.7.0",
+    "mocker-data-generator": "^2.4.9",
     "nock": "^9.0.20",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
