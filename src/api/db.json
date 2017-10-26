@@ -1,12 +1,1 @@
-{
-  "users": [
-    {
-      "id": "14e37798-0185-5ae4-a00a-9e5cbe8dbba9",
-      "firstName": "Magdalena",
-      "lastName": "Wuckert",
-      "country": "Guadeloupe",
-      "createdAt": "2017-01-18T21:02:04.123Z",
-      "email": "Kenyatta_Osinski@gmail.com"
-    }
-  ]
-}
+{"users":[{"id":"56c2b325-36ba-54d9-a83d-b0ba72ac4dc3","firstName":"Rowena","lastName":"Heaney","country":"France","createdAt":"2017-04-23T05:43:29.740Z","email":"Ewald23@gmail.com"},{"id":"d21966d5-e623-5628-86cc-0d925327d3c3","firstName":"Kale","lastName":"Feil","country":"Tuvalu","createdAt":"2017-09-27T10:24:03.400Z","email":"Milo_Rutherford84@hotmail.com"},{"id":"3816aae9-2a72-5e29-b542-71aacb7829ea","firstName":"Delphine","lastName":"Schowalter","country":"Palestinian Territory","createdAt":"2017-01-29T04:59:53.005Z","email":"Marilie.Windler@gmail.com"},{"id":"ed1a11a1-529e-51b9-b810-7e2740dd11d6","firstName":"Jakayla","lastName":"Auer","country":"Uganda","createdAt":"2017-09-25T18:15:30.600Z","email":"Jon_Cartwright@gmail.com"},{"id":"844c5d25-f2ac-56fe-9467-d920eddf069b","firstName":"Florian","lastName":"Ryan","country":"Pitcairn Islands","createdAt":"2017-04-07T06:15:15.425Z","email":"Lucas_Murazik@gmail.com"}]}

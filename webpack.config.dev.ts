@@ -1,4 +1,5 @@
 import { CheckerPlugin, TsConfigPathsPlugin } from 'awesome-typescript-loader';
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
 /* const ExtractTextPlugin:any = require("extract-text-webpack-plugin");
 const extractCSS: any = new ExtractTextPlugin("./dist/css/[name].css"); */
@@ -45,6 +46,12 @@ export default {
                 loader: 'style-loader!css-loader!sass-loader',
               },
         ],
-
+        plugins: [
+            // Create HTML file that includes reference to bundled JS.
+            new HtmlWebpackPlugin({
+                template: 'src/index.html',
+                inject: true,
+            }),
+        ],
       },
 };
