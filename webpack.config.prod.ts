@@ -7,9 +7,6 @@ import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as path from 'path';
 import * as webpack from 'webpack';
 
-/* const ExtractTextPlugin:any = require("extract-text-webpack-plugin");
-const extractCSS: any = new ExtractTextPlugin("./dist/css/[name].css"); */
-
 export default {
     stats: {
         assets: false,
