@@ -89,7 +89,7 @@ export default {
         // Hash the files using MD5 so that their names change when the content changes.
         new md5hashwebpack(),
 
-        // Use CommonsChunkPlugin to create a seperate bundle
+        // Use CommonsChunkPlugin to create a seperate bundle*
         // of vendor libraries so that they're cached separately.
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',

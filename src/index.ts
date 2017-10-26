@@ -32,3 +32,7 @@ getUsers().then((result: any) => {
         };
     });
 });
+
+if (module.hot) {
+    module.hot.accept();
+  }

@@ -1,15 +1,17 @@
 import { CheckerPlugin, TsConfigPathsPlugin } from 'awesome-typescript-loader';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
-/* const ExtractTextPlugin:any = require("extract-text-webpack-plugin");
-const extractCSS: any = new ExtractTextPlugin("./dist/css/[name].css"); */
+import * as webpack from 'webpack';
+const dir = path.resolve(__dirname, 'src/index');
+const hot = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000';
 
 export default {
-    watch: true,
-    devtool: 'inline-source-map',
-    entry: [
-        path.resolve(__dirname, 'src/index'),
-    ],
+    entry: {
+        main: [
+            dir,
+            hot,
+        ],
+    },
     target: 'web',
     output: {
         path: path.resolve(__dirname, 'src'),
@@ -57,5 +59,7 @@ export default {
             template: 'src/index.pug',
             inject: true,
         }),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
     ],
 };

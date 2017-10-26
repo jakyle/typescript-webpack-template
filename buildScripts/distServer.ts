@@ -3,6 +3,8 @@ import * as express from 'express';
 import * as path from 'path';
 // tslint:disable-next-line:no-var-requires
 const open = require('open');
+import * as webpack from 'webpack';
+import config from '../webpack.config.dev';
 
 const port: number = 3000;
 const app: any = express();

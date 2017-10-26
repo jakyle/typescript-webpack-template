@@ -6,7 +6,7 @@
     "test": "mocha -r ts-node/register -r ignore-styles -r jsdom-global/register src/**/*.test.ts",
     "lint": "tslint 'src/**/*.ts' -t stylish",
     "prestart": "ts-node buildScripts/startMessage.ts",
-    "start": "npm-run-all --parallel security-check open:src start-mockapi",
+    "start": "npm-run-all --parallel security-check open:src localtunnel start-mockapi ",
     "open:src": "ts-node buildScripts/srcServer.ts",
     "security-check": "nsp check",
     "localtunnel": "lt --port 3000 --subdomain jakyle",
@@ -38,6 +38,8 @@
     "@types/open": "^0.0.29",
     "@types/webpack": "^3.0.13",
     "@types/webpack-dev-middleware": "^1.9.3",
+    "@types/webpack-env": "^1.13.2",
+    "@types/webpack-hot-middleware": "^2.16.0",
     "awesome-typescript-loader": "^3.2.3",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -68,7 +70,6 @@
     "md5-hash-webpack-plugin": "^0.1.1",
     "mocha": "^3.5.3",
     "mocha-typescript": "^1.1.11",
-    "mocha-webpack": "^0.7.0",
     "mocker-data-generator": "^2.4.9",
     "nock": "^9.0.20",
     "node-sass": "^4.5.3",
@@ -91,6 +92,8 @@
     "typescript": "^2.5.3",
     "webpack": "^3.8.1",
     "webpack-dev-middleware": "^1.12.0",
-    "webpack-hot-middleware": "^2.19.1"
+    "webpack-dev-server": "^2.9.3",
+    "webpack-env": "^0.8.0",
+    "webpack-hot-middleware": "^2.20.0"
   }
 }
