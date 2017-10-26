@@ -17,7 +17,7 @@ export default {
         filename: 'bundle.js',
     },
     resolve: {
-        extensions: [ '.ts', '.tsx', '.js', '.scss', '.sass', '.css' ],
+        extensions: [ '.ts', '.tsx', '.js', '.scss', '.sass', '.css' , '.pug'],
     },
     module: {
         rules: [
@@ -45,13 +45,17 @@ export default {
                 test: /\.scss$/,
                 loader: 'style-loader!css-loader!sass-loader',
               },
-        ],
-        plugins: [
-            // Create HTML file that includes reference to bundled JS.
-            new HtmlWebpackPlugin({
-                template: 'src/index.html',
-                inject: true,
-            }),
+              {
+                test: /\.pug$/,
+                loader: 'pug-loader',
+              },
         ],
       },
+      plugins: [
+        // Create HTML file that includes reference to bundled JS.
+        new HtmlWebpackPlugin({
+            template: 'src/index.pug',
+            inject: true,
+        }),
+    ],
 };

@@ -11,6 +11,15 @@ import * as webpack from 'webpack';
 const extractCSS: any = new ExtractTextPlugin("./dist/css/[name].css"); */
 
 export default {
+    stats: {
+        assets: false,
+        colors: true,
+        version: false,
+        hash: true,
+        timings: true,
+        chunks: false,
+        chunkModules: false,
+      },
     devtool: 'source-map',
     watch: true,
     entry: {
@@ -24,7 +33,7 @@ export default {
         filename: '[name].[chunkhash].js',
     },
     resolve: {
-        extensions: [ '.ts', '.tsx', '.js', '.scss', '.sass', '.css' ],
+        extensions: [ '.ts', '.tsx', '.js', '.scss', '.sass', '.css', '.pug'],
     },
     module: {
         rules: [
@@ -64,6 +73,10 @@ export default {
                     ],
                 }),
               },
+              {
+                test: /\.pug$/,
+                loader: 'pug-loader',
+              },
         ],
 
       },
@@ -86,7 +99,7 @@ export default {
         }),
         // Create HTML file that includes reference to bundled JS.
         new HtmlWebpackPlugin({
-            template: 'src/index.html',
+            template: 'src/index.pug',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
